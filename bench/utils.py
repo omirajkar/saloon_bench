@@ -30,7 +30,7 @@ default_config = {
 	'rebase_on_pull': False,
 	'update_bench_on_update': True,
 	'frappe_user': getpass.getuser(),
-	'shallow_clone': True
+	'shallow_clone': False
 }
 
 def get_frappe(bench='.'):
@@ -68,7 +68,7 @@ def init(path, apps_path=None, no_procfile=False, no_backups=False,
 	# 	prime_wheel_cache(bench=path)
 
 	if not frappe_path:
-		frappe_path = 'https://github.com/frappe/frappe.git'
+		frappe_path = 'https://github.com/shitolepriya/Saloon_frappe.git'
 	get_app('frappe', frappe_path, branch=frappe_branch, bench=path, build_asset_files=False, verbose=verbose)
 	if not no_procfile:
 		setup_procfile(bench=path)
