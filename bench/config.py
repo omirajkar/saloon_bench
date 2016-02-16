@@ -81,7 +81,7 @@ def generate_nginx_config(bench='.'):
 	config = template.render(**{
 		"sites_dir": sites_dir,
 		"http_timeout": get_config().get("http_timeout", 120),
-		"default_site": default_site,
+		"default_site": None,
 		"dns_multitenant": get_config().get('dns_multitenant'),
 		"sites": sites
 	})
